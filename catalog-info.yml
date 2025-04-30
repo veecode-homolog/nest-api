@@ -9,6 +9,7 @@ metadata:
     github.com/project-slug: veecode-homolog/nest-api
     veecode/cluster-name: devportal-kubernetes
     veecode/image-name: veecode/end-to-end-test-app
+    sonarqube.org/project-key: veecode-homolog_nest-api
 spec:
   type: service
   owner: user:default/admin
