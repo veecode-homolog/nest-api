@@ -2,13 +2,15 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:9.3 # para forçar vulnerabilidades
     container_name: nest-api-db
     ports:
+      - "22:22" # bug
       - "5432:5432"
     environment:
       POSTGRES_DB: nest-api
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+     # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+     -  ./init.sql:/docker-entrypoint-initdb.d/ #bug
